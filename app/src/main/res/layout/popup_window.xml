@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_alpha"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="ALPHA"/>
+
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_rotation"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@color/colorYellow"
+        android:text="RITATION"/>
+
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_xrotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="XRITATION"/>
+
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_yrotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="YRITATION"/>
+
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_xyrotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorYellow"
+        android:text="XYROTATION"/>
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_xscale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="XSCALE"/>
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_yscale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="YSCALE"/>
+
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_xyscale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XYSCALE"
+        android:background="@color/colorYellow"/>
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_xtranslation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XTRANSLATION"
+        android:background="@color/colorYellow"/>
+    <Button
+        android:layout_margin="5dp"
+        android:id="@+id/popup_ytranslation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YTRANSLATION"
+        android:background="@color/colorYellow"/>
+
+</LinearLayout>

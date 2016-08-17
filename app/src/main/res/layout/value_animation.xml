@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/start_bn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="START"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:id="@+id/cancel_bn"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="CANCEL"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/view_bn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="VIEW"
+        android:background="@color/colorAccent"
+        android:layout_gravity="center"/>
+    <com.di.tang.myapplication.point.PointView
+        android:id="@+id/point_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
