@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--首先，AnimatorSet针对ValueAnimator和ObjectAnimator都是适用的，但一般而言，
+    我们不会用到ValueAnimator的组合动画，所以我们这篇仅讲解ObjectAnimator下的组合动画实现。
+在AnimatorSet中直接给为我们提供了两个方法playSequentially和playTogether，playSequentially表示所有
+动画依次播放，playTogether表示所有动画一起开始。-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/start_bn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STARTSeq"/>
+
+        <Button
+            android:id="@+id/start_bn01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="STARTTOG"/>
+
+        <Button
+            android:id="@+id/start_bn02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="STARTFREE"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/text1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEW"
+            android:background="@color/colorAccent"
+            android:textSize="25dp"/>
+        <TextView
+            android:id="@+id/text2"
+            android:layout_alignBottom="@+id/text1"
+            android:layout_toRightOf="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="20dp"
+            android:text="VIEW"
+            android:textSize="25dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

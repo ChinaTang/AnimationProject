@@ -7,9 +7,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.di.tang.myapplication.Fragment.SelfAnimatorSet;
+import com.di.tang.myapplication.Fragment.SelfListAnimator;
 import com.di.tang.myapplication.Fragment.SelfObjectAnimator;
+import com.di.tang.myapplication.Fragment.SelfPropertyValuesHolder;
 import com.di.tang.myapplication.Fragment.SelfValueAnimator;
 import com.di.tang.myapplication.Fragment.SelfViewAnimation;
+import com.di.tang.myapplication.Fragment.SelfXmlAnimator;
 import com.di.tang.myapplication.R;
 
 
@@ -35,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
                     return  new SelfValueAnimator();
                 }else if(position == 2){
                     return new SelfObjectAnimator();
+                }else if(position == 3){
+                    return new SelfPropertyValuesHolder();
+                }else if(position == 4){
+                    return new SelfAnimatorSet();
+                }else if(position == 5){
+                    return new SelfXmlAnimator();
+                }else if(position == 6){
+                    return new SelfListAnimator();
                 }else{
                     return new SelfViewAnimation();
                 }
@@ -42,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 3;
+                return 7;
             }
         });
     }
