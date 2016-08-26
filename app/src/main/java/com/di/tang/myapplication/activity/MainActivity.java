@@ -7,6 +7,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.di.tang.myapplication.Fragment.CustomScrollViewFragment;
+import com.di.tang.myapplication.Fragment.MyTextViewFragment;
 import com.di.tang.myapplication.Fragment.SelfAnimatorSet;
 import com.di.tang.myapplication.Fragment.SelfListAnimator;
 import com.di.tang.myapplication.Fragment.SelfObjectAnimator;
@@ -47,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
                     return new SelfXmlAnimator();
                 }else if(position == 6){
                     return new SelfListAnimator();
+                }else if(position == 7){
+                    return new MyTextViewFragment();
+                }else if(position == 8){
+                    return new CustomScrollViewFragment();
                 }else{
                     return new SelfViewAnimation();
                 }
@@ -54,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 7;
+                return 9;
             }
         });
     }

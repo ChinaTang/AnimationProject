@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrstest ="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.di.tang.myapplication.selfview.MyTextView
+        android:id="@+id/my_text_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        attrstest:header="@drawable/pic1"
+        attrstest:headerHeight="300dp"
+        attrstest:headerVisibleHeight="100dp"
+        attrstest:age="young"/>
+
+</RelativeLayout>

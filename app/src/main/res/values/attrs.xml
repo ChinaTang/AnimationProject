@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--最重要的一点是declare-styleable旁边有一个name属性，这个name的取值就是对应所定义的类名。即要为哪个类添加自定义的属性，那这个name属性的值就是哪个。当然我们这里要为自定义的MyTextView来添加XML属性，所以name = "MyTextView"；
+2、自定义属性值可以组合使用比如：<attr name="border_color" format="color|reference"/ >；即表示即可以自定义color值比如#ff00ff，也可以利用@color/XXX来引用color.xml中已有的值
+
+有关<declare-styleable / >标签下各个标签的用法，我们后面会逐一讲解。
+这里就先讲讲上面的几个：
+reference指的是从string.xml、drawable.xml、color.xml等引用过来的值
+flag是自己定义的,类似于 android:gravity="top"
+dimension 指的是是从dimension.xml里引用过来的内容.注意,这里如果是dp那就会做像素转换-->
+<resources>
+    <declare-styleable name="MyTextView">
+        <attr name="header" format="reference"/>
+        <attr name="headerHeight" format="dimension" />
+        <attr name="headerVisibleHeight" format="dimension" />
+        <attr name="age">
+            <flag name="child" value="10"/>
+            <flag name="young" value="18"/>
+            <flag name="old" value="60"/>
+        </attr>
+    </declare-styleable>
+</resources>
