@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.di.tang.myapplication.Fragment.CustomScrollViewFragment;
+import com.di.tang.myapplication.Fragment.CustomScrollViewUtilizationFragment;
 import com.di.tang.myapplication.Fragment.MyTextViewFragment;
 import com.di.tang.myapplication.Fragment.SelfAnimatorSet;
 import com.di.tang.myapplication.Fragment.SelfListAnimator;
@@ -16,6 +17,7 @@ import com.di.tang.myapplication.Fragment.SelfPropertyValuesHolder;
 import com.di.tang.myapplication.Fragment.SelfValueAnimator;
 import com.di.tang.myapplication.Fragment.SelfViewAnimation;
 import com.di.tang.myapplication.Fragment.SelfXmlAnimator;
+import com.di.tang.myapplication.Fragment.mergeFragment;
 import com.di.tang.myapplication.R;
 
 
@@ -53,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
                     return new MyTextViewFragment();
                 }else if(position == 8){
                     return new CustomScrollViewFragment();
+                }else if(position == 9){
+                    return new CustomScrollViewUtilizationFragment();
+                }else if(position == 10){
+                    return new mergeFragment();
                 }else{
                     return new SelfViewAnimation();
                 }
@@ -60,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 9;
+                return 11;
             }
         });
     }

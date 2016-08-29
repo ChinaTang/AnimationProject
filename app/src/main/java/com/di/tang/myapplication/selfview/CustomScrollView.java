@@ -37,6 +37,9 @@ public class CustomScrollView extends ScrollView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event){
+        /*layout函数会改变组件直角坐标系的位置， 即移动组件后坐标原点也移动了， Animation动画的移动，
+        ，则是靠自身的坐标系来移动的。*/
+        /*curY记录了移动前直角坐标系Y轴的坐标*/
         int curY = (int)event.getY();
         switch(event.getAction()){
             case MotionEvent.ACTION_MOVE :
@@ -54,6 +57,7 @@ public class CustomScrollView extends ScrollView {
                 break;
             case MotionEvent.ACTION_UP :
                 int curTop = RootView.getTop();
+                /*layout将组件重新回到原来的坐标系位置， 然后再用动画移动*/
                 RootView.layout( RootRect.left, RootRect.top, RootRect.right, RootRect.bottom);
                 TranslateAnimation animation = new TranslateAnimation(0, 0, curTop - RootRect.top, 0);
                 animation.setDuration(200);
