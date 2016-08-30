@@ -15,6 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".scroll.ScrollLinearActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ScrollLinearActivity" />
+
+                <category android:name="android.intent.category.ScrollLinearActivity" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

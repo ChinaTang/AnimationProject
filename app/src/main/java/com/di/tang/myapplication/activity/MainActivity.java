@@ -6,10 +6,12 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 
 import com.di.tang.myapplication.Fragment.CustomScrollViewFragment;
 import com.di.tang.myapplication.Fragment.CustomScrollViewUtilizationFragment;
 import com.di.tang.myapplication.Fragment.MyTextViewFragment;
+import com.di.tang.myapplication.Fragment.ScrollViewBaseFragment;
 import com.di.tang.myapplication.Fragment.SelfAnimatorSet;
 import com.di.tang.myapplication.Fragment.SelfListAnimator;
 import com.di.tang.myapplication.Fragment.SelfObjectAnimator;
@@ -20,8 +22,28 @@ import com.di.tang.myapplication.Fragment.SelfXmlAnimator;
 import com.di.tang.myapplication.Fragment.mergeFragment;
 import com.di.tang.myapplication.R;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    public interface MyTouchListener{
+        public boolean onSelfTouchEvent(MotionEvent event);
+    }
+
+    public ArrayList<MyTouchListener>  listeners = new ArrayList<>();
+
+    public void addTochListenter(MyTouchListener listener){
+        listeners.add(listener);
+    }
+
+    public void removeTochListenter(MyTouchListener listener){
+        listeners.remove(listener);
+    }
+
+    public void clearTochuListener(){
+        listeners.clear();
+    }
 
     private static final String TAG = "MainActivity";
 
@@ -59,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                     return new CustomScrollViewUtilizationFragment();
                 }else if(position == 10){
                     return new mergeFragment();
+                }else if(position == 11){
+                    return new ScrollViewBaseFragment();
                 }else{
                     return new SelfViewAnimation();
                 }
@@ -66,8 +90,18 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 11;
+                return 12;
             }
         });
     }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev){
+        for(MyTouchListener listener : listeners){
+            return listener.onSelfTouchEvent(ev);
+        }
+        return false;
+    }
+
 }

@@ -2,6 +2,7 @@ package com.di.tang.myapplication.Fragment;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.di.tang.myapplication.R;
+import com.di.tang.myapplication.scroll.ScrollLinearActivity;
 
 /**
  * Created by tangdi on 2016/8/16.
@@ -59,6 +61,8 @@ public class SelfViewAnimation extends Fragment {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+                Intent intent = new Intent(getActivity(), ScrollLinearActivity.class);
+                getActivity().startActivity(intent);
                 tv.startAnimation(scaleAnimation);
             }
         });
