@@ -22,6 +22,13 @@
                 <category android:name="android.intent.category.ScrollLinearActivity" />
             </intent-filter>
         </activity>
+        <activity android:name=".scroll.ScrollListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ScrollListActivity" />
+
+                <category android:name="android.intent.category.ScrollListActivity" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.di.tang.myapplication.R;
 import com.di.tang.myapplication.scroll.ScrollLinearActivity;
+import com.di.tang.myapplication.scroll.ScrollListActivity;
 
 /**
  * Created by tangdi on 2016/8/16.
@@ -69,6 +70,8 @@ public class SelfViewAnimation extends Fragment {
         rotateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ScrollListActivity.class);
+                getActivity().startActivity(intent);
                 tv.startAnimation(rotateAnimation);
             }
         });
